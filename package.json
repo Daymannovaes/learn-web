@@ -1,0 +1,12 @@
+{
+  "name": "learn-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
+}

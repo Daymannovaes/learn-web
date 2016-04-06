@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+
+@import "build/bower_components/bootstrap/scss/bootstrap-flex.scss";
+@import "build/bower_components/font-awesome/scss/font-awesome.scss";
+@import "src/sass/_mixins.scss";
+
+$base-color: #1B83CD;
+$base-unit: 30px;
+
+html {
+	overflow-x: hidden;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+    font-size: 20px;
+}
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+header {
+	margin-top: 2*$base-unit;
+
+    padding: 30px;
+
+    background-color: $base-color;
+    color: white;
+
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 0 -3px 3px 0 rgba(0, 0, 0, 0.24);
+
+    h1 {
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+
+section {
+    @include container(1);
+
+    margin-top: 3*$base-unit;
+
+    text-align: center;
+}

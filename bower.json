@@ -1,0 +1,11 @@
+{
+  "name": "Learn Web",
+  "authors": [
+    "Dayman Novaes <daymannovaes@gmail.com>"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~4",
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}
