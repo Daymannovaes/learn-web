@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const image = require('gulp-image');
 const browserSync = require('browser-sync').create();
 
 function onError(err) {
@@ -44,4 +45,10 @@ gulp.task('sass', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['sass', 'watch', 'browser-sync']);
+gulp.task('image', function () {
+  gulp.src('src/img/*')
+    .pipe(image())
+    .pipe(gulp.dest('build/img'));
+});
+
+gulp.task('default', ['sass', 'image', 'watch', 'browser-sync']);
