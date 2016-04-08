@@ -7384,8 +7384,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 20px;
-  padding-bottom: 90px; }
+  font-size: 20px; }
 
 @viewport {
   zoom: 1.0;
@@ -7395,23 +7394,48 @@ body {
   width: extend-to-zoom;
   zoom: 1.0; }
 
-header {
-  margin-top: 60px;
+header .body {
   padding: 30px;
-  background-color: #1B83CD;
-  color: white;
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 0 -3px 3px 0 rgba(0, 0, 0, 0.24); }
-  header h1 {
+  background: #1B83CD;
+  background: -moz-linear-gradient(-45deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #1B83CD), color-stop(39%, #1C7ABD), color-stop(100%, #1A6BA5));
+  background: -webkit-linear-gradient(-45deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
+  background: -o-linear-gradient(-45deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
+  background: -ms-linear-gradient(-45deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
+  background: linear-gradient(135deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-color', endColorstr='$base-color-darker-2', GradientType=1 );
+  color: white; }
+  header .body h1 {
     text-transform: uppercase; }
-  header h2 {
-    font-size: 20px; }
+  header .body h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0; }
 
 footer {
   margin-top: 60px;
   padding: 30px;
-  background-color: #1B83CD;
-  color: white;
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24); }
+  background-color: #F1F1F1;
+  color: #989898;
+  text-shadow: 0px 2px 0px #FFF;
+  font-size: 14px;
+  text-align: center; }
+  footer ul a {
+    color: #989898; }
+    footer ul a:hover {
+      color: #707070; }
+
+ul.list {
+  display: inline-block;
+  text-align: left; }
+  ul.list li {
+    list-style: initial; }
+
+ol.list {
+  display: inline-block;
+  text-align: left; }
+  ol.list li {
+    margin-bottom: 10px; }
 
 .class-title, .text {
   text-align: center;
@@ -7470,3 +7494,9 @@ section {
 
 [data-hint]:after {
   box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 2px 2px 3px 0 rgba(0, 0, 0, 0.24); }
+
+.heart {
+  width: 60px;
+  position: relative;
+  top: -5px;
+  left: 5px; }
