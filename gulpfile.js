@@ -41,14 +41,8 @@ gulp.task('sass', () => {
     .src('src/sass/main.scss')
     .pipe(sass())
     .on('error', onError)
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('image', function () {
-  gulp.src('src/img/*')
-    .pipe(image())
-    .pipe(gulp.dest('build/img'));
-});
-
-gulp.task('default', ['sass', 'image', 'watch', 'browser-sync']);
+gulp.task('default', ['sass', 'watch', 'browser-sync']);

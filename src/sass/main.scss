@@ -1,11 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 
-@import "build/bower_components/bootstrap/scss/bootstrap-flex.scss";
-@import "build/bower_components/font-awesome/scss/font-awesome.scss";
+@import "src/bower_components/hint.css/src/hint.scss";
+@import "src/bower_components/bootstrap/scss/bootstrap-flex.scss";
+@import "src/bower_components/font-awesome/scss/font-awesome.scss";
 @import "src/sass/_mixins.scss";
 
 $base-color: #1B83CD;
+$base-color-darker: #1C7ABD;
 $base-unit: 30px;
+
+$gray-1: #F1F1F1;
 
 html {
 	overflow-x: hidden;
@@ -29,7 +33,7 @@ body {
 }
 
 header {
-	margin-top: 2*$base-unit;
+    margin-top: 2*$base-unit;
 
     padding: 30px;
 
@@ -46,16 +50,41 @@ header {
     }
 }
 
+footer {
+    margin-top: 2*$base-unit;
+
+    padding: 30px;
+
+    background-color: $base-color;
+    color: white;
+
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+}
+
+.class-title, .text {
+    text-align: center;
+    margin-top: 3*$base-unit;
+    margin-bottom: 0;
+}
 section {
     @include container(1);
 
     margin-top: 3*$base-unit;
+}
 
-    &.text {
-        text-align: center;
+.class, .image {
+    text-align: center;
+    background-color: $gray-1;
+
+    padding-top: 3*$base-unit;
+    padding-bottom: 2*$base-unit;
+
+    img {
+        width: 50%;
     }
 
-    &.class, &.image {
+    section {
+        margin-top: 0;
         > div {
             @extend .row;
 
@@ -68,4 +97,35 @@ section {
             }
         }
     }
+}
+.class--image {
+    @extend .hint--top;
+}
+
+.action {
+    margin-top: 3*$base-unit;
+    text-align: center;
+
+    button {
+        @extend .btn;
+
+        background-color: $base-color;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+        @include transition(box-shadow 150ms);
+
+        &:hover {
+            background-color: $base-color-darker;
+        }
+
+        &:active {
+            box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+        }
+    }
+}
+
+[data-hint]:after {
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 2px 2px 3px 0 rgba(0, 0, 0, 0.24);
 }
