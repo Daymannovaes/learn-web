@@ -7435,7 +7435,10 @@ ol.list {
   display: inline-block;
   text-align: left; }
   ol.list li {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: bold; }
+    ol.list li span {
+      font-weight: normal; }
 
 .class-title, .text {
   text-align: center;

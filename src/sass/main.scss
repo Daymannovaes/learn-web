@@ -95,7 +95,13 @@ ol.list {
     display: inline-block;
     text-align: left;
     li {
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
+
+        font-weight: bold;
+
+        span {
+            font-weight: normal;
+        }
     }
 }
 
