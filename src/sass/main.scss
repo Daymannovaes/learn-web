@@ -35,7 +35,16 @@ body {
 
 header {
     > div {
-        @include container(1);
+        @include make-container();
+        @media (min-width: 768px) {  
+            width: 720px;
+        }
+        @media (min-width: 992px) {  
+            width: 940px;
+        }
+        @media (min-width: 1200px) {  
+            width: 1140px;
+        }
     }
 
     padding: 30px;

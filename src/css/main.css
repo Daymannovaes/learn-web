@@ -7410,9 +7410,6 @@ header {
     margin-right: auto;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
-    @media (min-width: 544px) {
-      header > div {
-        width: 576px; } }
     @media (min-width: 768px) {
       header > div {
         width: 720px; } }
