@@ -34,29 +34,53 @@ body {
 }
 
 header {
-    .body {
-        padding: 30px;
+    padding: 30px;
 
-        background: $base-color;
-        background: -moz-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
-        background: -webkit-gradient(left top, right bottom, color-stop(0%, $base-color), color-stop(39%, $base-color-darker), color-stop(100%, $base-color-darker-2));
-        background: -webkit-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
-        background: -o-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
-        background: -ms-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
-        background: linear-gradient(135deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-color', endColorstr='$base-color-darker-2', GradientType=1 );
-        
-        color: white;
+    background: $base-color;
+    background: -moz-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $base-color), color-stop(39%, $base-color-darker), color-stop(100%, $base-color-darker-2));
+    background: -webkit-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
+    background: -o-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
+    background: -ms-linear-gradient(-45deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
+    background: linear-gradient(135deg, $base-color 0%, $base-color-darker 39%, $base-color-darker-2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-color', endColorstr='$base-color-darker-2', GradientType=1 );
+    
+    color: white;
 
-        h1 {
-            text-transform: uppercase;
+    h1 {
+        text-transform: uppercase;
+    }
+
+    img {
+        width: 4*$base-unit;
+
+        margin: 0 $base-unit;
+    }
+    .header-text {
+        padding-top: 35px;
+    }
+
+
+    @media (max-width: 690px) {
+        img {
+            width: 7*$base-unit;
         }
-        h2 {
-            font-size: 20px;
-
-            margin-top: 10px;
-            margin-bottom: 0;
+        .header-image {
+            margin: 0 auto;
         }
+        .header-text {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+
+    h2 {
+        font-size: 26px;
+        text-transform: uppercase;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -141,9 +165,6 @@ section {
             }
         }
     }
-}
-.class--image {
-    @extend .hint--top;
 }
 
 .action {
