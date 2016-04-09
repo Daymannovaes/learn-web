@@ -7405,11 +7405,28 @@ header {
   background: linear-gradient(135deg, #1B83CD 0%, #1C7ABD 39%, #1A6BA5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-color', endColorstr='$base-color-darker-2', GradientType=1 );
   color: white; }
+  header > div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+    @media (min-width: 544px) {
+      header > div {
+        width: 576px; } }
+    @media (min-width: 768px) {
+      header > div {
+        width: 720px; } }
+    @media (min-width: 992px) {
+      header > div {
+        width: 940px; } }
+    @media (min-width: 1200px) {
+      header > div {
+        width: 1140px; } }
   header h1 {
     text-transform: uppercase; }
   header img {
     width: 120px;
-    margin: 0 30px; }
+    margin: 0 30px 0 0; }
   header .header-text {
     padding-top: 35px; }
   @media (max-width: 690px) {
@@ -7479,17 +7496,30 @@ section {
     section {
       width: 1140px; } }
 
-.class, .image {
+.base-class, .class, .image, .class-2 {
   text-align: center;
   background-color: #F1F1F1;
   padding-top: 90px;
   padding-bottom: 60px; }
-  .class img, .image img {
-    width: 50%; }
-  .class section, .image section {
+
+.class img, .image img {
+  width: 50%; }
+
+.class section, .image section {
+  margin-top: 0; }
+  .class section > div > div, .image section > div > div {
+    margin-bottom: 30px; }
+
+.class-2 {
+  padding-top: 90px;
+  padding-bottom: 80px; }
+  .class-2 section {
     margin-top: 0; }
-    .class section > div > div, .image section > div > div {
-      margin-bottom: 30px; }
+    .class-2 section > small {
+      margin-top: 15px;
+      display: block; }
+  .class-2 ol {
+    margin-bottom: 0; }
 
 .action {
   margin-top: 90px;
@@ -7511,7 +7541,8 @@ section {
       box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.24); }
 
 [data-hint]:after {
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 2px 2px 3px 0 rgba(0, 0, 0, 0.24); }
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 2px 2px 3px 0 rgba(0, 0, 0, 0.24);
+  white-space: normal; }
 
 .heart {
   width: 60px;

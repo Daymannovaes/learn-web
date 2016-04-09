@@ -34,6 +34,10 @@ body {
 }
 
 header {
+    > div {
+        @include container(1);
+    }
+
     padding: 30px;
 
     background: $base-color;
@@ -54,7 +58,7 @@ header {
     img {
         width: 4*$base-unit;
 
-        margin: 0 $base-unit;
+        margin: 0 $base-unit 0 0;
     }
     .header-text {
         padding-top: 35px;
@@ -140,12 +144,16 @@ section {
     margin-top: 3*$base-unit;
 }
 
-.class, .image {
+.base-class {
     text-align: center;
     background-color: $gray-1;
 
     padding-top: 3*$base-unit;
     padding-bottom: 2*$base-unit;
+}
+
+.class, .image {
+    @extend .base-class;
 
     img {
         width: 50%;
@@ -164,6 +172,26 @@ section {
                 margin-bottom: $base-unit;
             }
         }
+    }
+}
+
+.class-2 {
+    @extend .base-class;
+
+    padding-top: 3*$base-unit;
+    padding-bottom: 3*$base-unit - 10px;
+    
+    section {
+        margin-top: 0;
+
+        > small {
+            margin-top: $base-unit/2;
+            display: block;
+        }
+    }
+
+    ol {
+        margin-bottom: 0;
     }
 }
 
@@ -193,6 +221,7 @@ section {
 
 [data-hint]:after {
     box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2), 2px 2px 3px 0 rgba(0, 0, 0, 0.24);
+    white-space: normal;
 }
 
 .heart {
